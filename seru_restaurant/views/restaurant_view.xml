@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seru_menu_form_view" model="ir.ui.view">
+            <field name="name">seru.menu.form.view</field>
+            <field name="model">seru.menu</field>
+            <field name="arch" type="xml">
+                <form string="Menu Makanan">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="harga"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="seru_menu_tree_view" model="ir.ui.view">
+            <field name="name">seru.menu.tree.view</field>
+            <field name="model">seru.menu</field>
+            <field name="arch" type="xml">
+                <tree string="Menu Makanan">
+                    <field name="name"/>
+                    <field name="harga"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="seru_menu_action_view" model="ir.actions.act_window">
+            <field name="name">Menu Makanan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">seru.menu</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Belum ada menu
+              </p><p>
+                Klik create untuk menambahkan menu
+              </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

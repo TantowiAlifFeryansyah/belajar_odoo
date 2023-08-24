@@ -1,0 +1,1 @@
+from . import seru_restaurant
