@@ -6,10 +6,16 @@
             <field name="model">seru.menu</field>
             <field name="arch" type="xml">
                 <form string="Menu Makanan">
+                    <header>
+                        <button name="action_confirm" string="Confirm" class="oe_highlight" states="draft" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm" statusbar_colors="{'confirm':'green'}"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name"/>
                             <field name="harga"/>
+                            <field name="image" widget="image"/>
+                            <field name="attachment_ids" widget="many2many_binary"/>
                         </group>
                     </sheet>
                 </form>
