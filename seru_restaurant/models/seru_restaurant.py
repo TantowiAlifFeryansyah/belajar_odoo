@@ -18,6 +18,8 @@ class SeruMenu(models.Model):
 
     image = fields.Binary(string="Image",  )
     attachment_ids = fields.Many2many(comodel_name="ir.attachment", string="Attachments", )
+    # new_field_ids = fields.One2many(comodel_name="", inverse_name="", string="", required=False, )
+    # new_field_id = fields.Many2one(comodel_name="", string="", required=False, )
 
     def action_confirm(self):
         self.state = 'confirm'
