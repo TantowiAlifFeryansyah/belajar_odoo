@@ -6,10 +6,16 @@
             <field name="model">seru.menu</field>
             <field name="arch" type="xml">
                 <form string="Menu Makanan">
+                    <header>
+                        <button name="action_confirm" string="Confirm" class="oe_highlight" states="draft" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm" statusbar_colors="{'confirm':'green'}"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name"/>
                             <field name="harga"/>
+                            <field name="image" widget="image"/>
+                            <field name="attachment_ids" widget="many2many_binary"/>
                         </group>
                     </sheet>
                 </form>
@@ -37,6 +43,46 @@
                 Belum ada menu
               </p><p>
                 Klik create untuk menambahkan menu
+              </p>
+            </field>
+        </record>
+
+        <record id="seru_restaurant_form_view" model="ir.ui.view">
+            <field name="name">seru.restaurant.form.view</field>
+            <field name="model">seru.restaurant</field>
+            <field name="arch" type="xml">
+                <form string="Restaurant">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="alamat"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="seru_restaurant_tree_view" model="ir.ui.view">
+            <field name="name">seru.restaurant.tree.view</field>
+            <field name="model">seru.restaurant</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="alamat"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="seru_restaurant_action_view" model="ir.actions.act_window">
+            <field name="name">Restaurant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">seru.restaurant</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Restaurant Seru
+              </p><p>
+                Komplek Merpati
               </p>
             </field>
         </record>
