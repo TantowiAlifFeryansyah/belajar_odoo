@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_seru_menu,access_seru_menu,model_seru_menu,,1,1,1,1
 access_seru_restaurant,access_seru_restaurant,model_seru_restaurant,,1,1,1,1
+access_restaurant_menu,access_restaurant_menu,model_restaurant_menu,,1,1,1,1

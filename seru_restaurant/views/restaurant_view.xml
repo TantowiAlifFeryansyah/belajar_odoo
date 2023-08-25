@@ -54,9 +54,24 @@
                 <form string="Restaurant">
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="alamat"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="no_handphone"/>
+                                <field name="no_induk" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="alamat" required="1"/>
+                            </group>
+
+
                         </group>
+                        <field name="menu_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="menu_id"/>
+                                <field name="harga_menu"/>
+                                <field name="harga"/>
+                            </tree>
+                        </field>
                     </sheet>
                 </form>
             </field>
