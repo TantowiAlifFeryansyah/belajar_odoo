@@ -12,10 +12,15 @@
                     </header>
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="harga"/>
-                            <field name="image" widget="image"/>
-                            <field name="attachment_ids" widget="many2many_binary"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="harga"/>
+                                <field name="no_menu" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="image" widget="image"/>
+                                <field name="attachment_ids" widget="many2many_binary"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
@@ -70,6 +75,10 @@
                                 <field name="menu_id"/>
                                 <field name="harga_menu"/>
                                 <field name="harga"/>
+                                <field name="diskon"/>
+                                <field name="netto"/>
+                                <field name="voucher"/>
+                                <field name="setelah_voucher"/>
                             </tree>
                         </field>
                     </sheet>
