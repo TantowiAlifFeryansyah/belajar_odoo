@@ -7,7 +7,8 @@
     'data': [
         'views/restaurant_view.xml',
         'views/menu.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'data/sequence.xml'
     ],
     'installable': True,
     'auto_install': False

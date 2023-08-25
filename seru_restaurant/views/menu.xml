@@ -8,7 +8,7 @@
         <!-- This Menu Item must have a parent and an action -->
         <menuitem id="action_menu_menu" name="Menu Makanan" parent="categ_menu_restaurant" action="seru_menu_action_view" sequence="10"/>
         <!-- This Menu Item must have a parent and an action -->
-        <menuitem id="action_restaurant_menu" name="Restaurant Name" parent="action_menu_menu" action="seru_restaurant_action_view" sequence="10"/>
+        <menuitem id="action_restaurant_menu" name="Restaurant Name" parent="categ_menu_restaurant" action="seru_restaurant_action_view" sequence="20"/>
 
     </data>
 </odoo>

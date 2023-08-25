@@ -37,6 +37,11 @@ class SeruRestaurant(models.Model):
 
     menu_ids = fields.One2many(comodel_name="restaurant.menu", inverse_name="restaurant_id", string="Menu", required=False, )
 
+    @api.model
+    def create(self, values):
+        values['no_induk'] = self.env.ref('seru_restaurant.seq_seru_restaurant').next_by_id()
+        return super(SeruRestaurant, self).create(values)
+
 class RestaurantMenu(models.Model):
     _name = 'restaurant.menu'
     _description = 'Restaurant Menu'
